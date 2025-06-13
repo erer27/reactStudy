@@ -48,8 +48,8 @@ function BoardList(){
                 <div className="container h-100">
                     <div className="row h-100 align-items-center">
                         <div className="col-12" >
-                            <div className="bradcumb-title text-center">
-                                <h2>TanStackQuery+TypeScript를 활용한 게시판</h2>
+                            <div className="bradcumb-title text-center br">
+                                <h2>TanStackQuery+TypeScript</h2>
                             </div>
                         </div>
                     </div>
@@ -59,12 +59,10 @@ function BoardList(){
                 <div className="container">
                     <div className="row">
                         <div className={"col-12 p-0"} style={{"fontSize":"20px"}}>
-                        <table className="table">
+                        <table className="table" >
                             <tbody>
                             <tr>
-                                <td>
-                                    <Link to={"/board/insert"} className="btn btn-primary">새글</Link>
-                                </td>
+                                    <Link to={"/board/insert"} className="cosmetic-button pink">새글</Link>
                             </tr>
                             </tbody>
                         </table>
@@ -83,7 +81,7 @@ function BoardList(){
                                 data?.data.list.map((board:BoardItem) => (
                                     <tr>
                                         <td className={"text-center"}>{board.no}</td>
-                                        <td><Link to={"/board/detail/"+board.no}>{board.subject}</Link>
+                                        <td><Link to={"/board/detail/"+board.no} style={{  "color": "inherit","textDecoration": "none"}}>{board.subject}</Link>
                                             {
                                                 board.dbday === data.data.today &&
                                                 <sup style={{color:'red'}}>new</sup>
@@ -97,9 +95,9 @@ function BoardList(){
                             }
                             <tr>
                                 <td colSpan={5} className={"text-center"}>
-                                    <button className={"btn btn-success"} onClick={prev}>이전</button>
+                                    <button className={"cosmetic-button pink"} onClick={prev}>이전</button>
                                     {data?.data.curpage} page / {data?.data.totalpage} pages
-                                    <button className={"btn btn-success"} onClick={next}>다음</button>
+                                    <button className={"cosmetic-button pink"} onClick={next}>다음</button>
                                 </td>
                             </tr>
                             </tbody>

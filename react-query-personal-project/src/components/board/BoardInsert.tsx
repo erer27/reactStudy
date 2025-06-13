@@ -145,7 +145,7 @@ function BoardInsert(){
                 <div className="container">
                     <div className="row">
 
-                        <table className={"table"}>
+                        <table className={"table"} style={{"fontSize":"20px"}}>
                             <tbody>
                             <tr>
                                 <th className={"text-center"} style={{"width":"15%"}}>이름</th>
@@ -189,8 +189,8 @@ function BoardInsert(){
                             </tr>
                             <tr>
                                 <td colSpan={2} className={"text-center"}>
-                                    <button className={"btn btn-primary"} onClick={insert}>글쓰기</button>
-                                    <button className={"btn btn-primary"} onClick={cancel}>취소</button>
+                                    <button className={"cosmetic-button pink"} onClick={insert}>글쓰기</button>
+                                    <button className={"cosmetic-button pink ml-3"} onClick={cancel}>취소</button>
                                 </td>
                             </tr>
                             </tbody>

@@ -13,6 +13,7 @@ import BoardDetail from "./components/board/BoardDetail";
 import BoardInsert from "./components/board/BoardInsert";
 import FoodDetail from "./components/food/FoodDetail";
 import RecipeDetail from "./components/recipe/RecipeDetail";
+import ChatClient from "./components/chat/ChatClient";
 function App() {
     return (
         <Router>
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/board/detail/:no" element={<BoardDetail/>}/>
                 <Route path="/board/insert" element={<BoardInsert/>}/>
 
+                <Route path="/chat/chat" element={<ChatClient/>}/>
             </Routes>
             <Footer/>
         </Router>

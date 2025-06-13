@@ -42,12 +42,12 @@ function BoardDetail() {
     console.log(board)
     return (
         <Fragment>
-            <div className="breadcumb-area" style={{"backgroundImage": "url(/img/bg-img/breadcumb.jpg)"}}>
+            <div className="breadcumb-area br" style={{"backgroundImage": `url(${process.env.PUBLIC_URL}/img/banner.jpg)`}}>
                 <div className="container h-100">
                     <div className="row h-100 align-items-center">
                         <div className="col-12">
                             <div className="bradcumb-title text-center">
-                                <h2>TanStackQuery+TypeScript를 활용한 게시판</h2>
+                                <h2>TanStackQuery+TypeScript</h2>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ function BoardDetail() {
                 <div className="container">
                     <div className="row">
                         <h3>내용보기</h3>
-                        <table className="table">
+                        <table className="table" style={{"fontSize":"20px"}}>
                             <tbody>
                             <tr>
                                 <th style={{"width":"20%"}} className={"text-center"}>번호</th>
@@ -82,9 +82,9 @@ function BoardDetail() {
                             </tr>
                             <tr>
                                 <td colSpan={4} className={"text-right"}>
-                                    <Link className="btn btn-primary btn-xs" to={"/board/update/"+board.no}>수정</Link>
-                                    <Link className="btn btn-primary btn-xs" to={"/board/delete/"+board.no}>삭제</Link>
-                                    <Link className="btn btn-primary btn-xs" to={"/board/list"}>목록</Link>
+                                    <Link className="cosmetic-button pink mr-3" to={"/board/update/"+board.no}>수정</Link>
+                                    <Link className="cosmetic-button pink mr-3" to={"/board/delete/"+board.no}>삭제</Link>
+                                    <Link className="cosmetic-button pink" to={"/board/list"}>목록</Link>
                                 </td>
                             </tr>
                             </tbody>

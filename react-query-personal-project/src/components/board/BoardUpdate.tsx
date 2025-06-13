@@ -106,7 +106,7 @@ function BoardUpdate(){
                 <div className="container">
                     <div className="row">
 
-                        <table className={"table"}>
+                        <table className={"table"} style={{"fontSize":"20px"}}>
                             <tbody>
                             <tr>
                                 <th className={"text-center"} style={{"width":"15%"}}>이름</th>
@@ -150,8 +150,8 @@ function BoardUpdate(){
                             </tr>
                             <tr>
                                 <td colSpan={2} className={"text-center"}>
-                                    <button className={"btn btn-primary"} onClick={boardUpdateOk}>수정</button>
-                                    <button className={"btn btn-primary"} onClick={cancel}>취소</button>
+                                    <button className={"cosmetic-button pink mr-3"} onClick={boardUpdateOk}>수정</button>
+                                    <button className={"cosmetic-button pink"} onClick={cancel}>취소</button>
                                 </td>
                             </tr>
                             </tbody>
