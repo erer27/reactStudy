@@ -7,7 +7,7 @@ interface BoardDetailResponse {
     name:string;
     subject:string;
     content:string;
-    dbday:string;
+    regdate:string;
     hit:number;
 }
 // => function / return을 제거할 수 있다
@@ -63,7 +63,7 @@ function BoardDetail() {
                                 <th style={{"width":"20%"}} className={"text-center"}>번호</th>
                                 <td style={{"width":"30%"}} className={"text-center"}>{board.no}</td>
                                 <th style={{"width":"20%"}} className={"text-center"}>작성일</th>
-                                <td style={{"width":"30%"}} className={"text-center"}>{board.dbday}</td>
+                                <td style={{"width":"30%"}} className={"text-center"}>{board.regdate.substring(0, 10)}</td>
                             </tr>
                             <tr>
                                 <th style={{"width":"20%"}} className={"text-center"}>이름</th>

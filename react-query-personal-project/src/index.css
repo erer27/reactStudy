@@ -110,12 +110,12 @@ code {
 }
 
 .cosmetic-button.pink {
-  background-color: #fce4ec;
+  background-color: #4CAF50;
   border: none;
-  color: #880e4f;
+  color: white;
 }
 
 .cosmetic-button.pink:hover {
-  background-color: #f8bbd0;
-  color: #560027;
+  background-color: #4CAF50;
+  color: white;
 }

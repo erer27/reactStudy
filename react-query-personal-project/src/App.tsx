@@ -11,6 +11,7 @@ import BoardDelete from "./components/board/BoardDelete";
 import BoardDetail from "./components/board/BoardDetail";
 import BoardInsert from "./components/board/BoardInsert";
 import ChatClient from "./components/chat/ChatClient";
+import Login from "./components/member/Login";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
             <Route path="/board/delete/:no" element={<BoardDelete/>}/>
             <Route path="/board/detail/:no" element={<BoardDetail/>}/>
             <Route path="/board/insert" element={<BoardInsert/>}/>
-            <Route path="/chat/chat" element={<ChatClient/>}/>
+            <Route path="/login/login" element={<Login/>}/>
         </Routes>
         <Footer/>
       </Router>

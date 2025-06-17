@@ -7,12 +7,12 @@ interface BoardItem {
     no: number;
     subject: string;
     name: string;
-    dbday:string;
+    regdate:string;
     hit:number;
 }
 interface BoardListResponse {
     list: BoardItem[];
-    today: string;
+    regdate: string;
     curpage:number;
     totalpage:number;
 }
@@ -41,7 +41,7 @@ function BoardList(){
     const next=()=> setCurpage(data?.data && curpage<data.data.totalpage?curpage+1:curpage)
 
 
-
+    console.log(data)
     return (
         <Fragment>
             <div className="breadcumb-area" style={{"backgroundImage": `url(${process.env.PUBLIC_URL}/img/banner.jpg)`}}>
@@ -82,13 +82,9 @@ function BoardList(){
                                     <tr>
                                         <td className={"text-center"}>{board.no}</td>
                                         <td><Link to={"/board/detail/"+board.no} style={{  "color": "inherit","textDecoration": "none"}}>{board.subject}</Link>
-                                            {
-                                                board.dbday === data.data.today &&
-                                                <sup style={{color:'red'}}>new</sup>
-                                            }
                                         </td>
                                         <td className={"text-center"}>{board.name}</td>
-                                        <td className={"text-center"}>{board.dbday}</td>
+                                        <td className={"text-center"}>{board.regdate}</td>
                                         <td className={"text-center"}>{board.hit}</td>
                                     </tr>
                                 ))

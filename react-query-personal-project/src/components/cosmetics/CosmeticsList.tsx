@@ -23,7 +23,7 @@ function CosmeticsList(){
     const [curpage, setCurpage] = useState<number>(1);
     const [category, setCategory] = useState<string>("스킨케어");
     const {isLoading,isError,error,data}=useQuery<AxiosResponse<ProductListProps>,Error>({
-        queryKey:["cosmetics-list",curpage,category], // 키 변경 => 서버연결
+        queryKey:["cosmetics-list",curpage,category],
         queryFn: async ()=>{
             return await apiClient.get(`/cosmetics/list/${curpage}/${category}`);
         }
